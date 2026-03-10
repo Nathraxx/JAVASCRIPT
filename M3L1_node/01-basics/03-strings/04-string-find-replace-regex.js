@@ -31,9 +31,14 @@ const newString = originalString.replaceAll(regexReplace, 'place');
 console.log(`The regex ${regexReplace} changes "${originalString}" to "${newString}"`);
 
 
+
+
+
 /* Exercises
 
 1. Write code that replaces every tag '<firstName/>' in below text, with your name using RegEx. 
+
+
    
 '<firstName/> ipsum dolor sit amet, consectetur adipisicing elit, sed do <firstName/> tempor incididunt ut labore et dolore magna aliqua. 
    Ut enim ad minim <firstName/>, quis nostrud exercitation ullamco <firstName/> nisi ut aliquip ex ea commodo consequat.'
