@@ -6,7 +6,7 @@ let stringTest = '42';
 let numberTest = 42;
 const blankTest = '';
 const nullTest = null;
-const wrappedTest = new String('42');
+const wrappedTest = new String('42'); // this is a string object.
 
 console.log(typeof stringTest);
 console.log(typeof numberTest);
