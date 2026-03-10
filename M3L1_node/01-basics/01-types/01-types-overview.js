@@ -7,13 +7,13 @@ console.group('DECLARING variables and constants');
 // variables are declared using let
 // Using strict mode revents you from using a variable before it is declared
 
-let numberTest = 42;
-let stringTest =  `Hello ${numberTest}`;
+let numberTest = 420;
+let stringTest =  `Hello ${numberTest}`;  
 let booleanTest = true;
 let bigIntTest = 1234n;
 
 let symbolTest = Symbol("propertyName");    // ensures a unique identifier, even if propertyname is the same
-let objectTest = {name: `Martin`, age: 21 + 40};   // empty object, object root of every type on js
+let objectTest = {name: "Tomas", age: 16 + 20};   // empty object, object root of every type on js
 
 console.log(objectTest.phone)
 console.log(objectTest.age)
@@ -120,11 +120,31 @@ function isEqual(obj1, obj2) {
   return (JSON.stringify(obj1) === JSON.stringify(obj2));
 }
 
+let testq = 5 + 5+ '5' + 5 + false;
+console.log(testq); // 1055true
 
 /* Exercises
 
 1. Declare a variable and the assign various values such as 5, 5+8, 5+8+'15', 5+8+'15'+{}, '', "", ``;
    Write the variable to the console after each assignment
+*/
+let variable;
+variable = 5;
+console.log(variable);
+variable = 5+8;
+console.log(variable);
+variable = 5+8+'15';
+console.log(variable);
+variable = 5+8+'15'+{s1: "value"};
+console.log(variable);
+variable = 'user input';
+console.log(variable);
+variable = "gg6";
+console.log(variable);
+variable = `gg7`;
+console.log(variable);
+
+/*
 2. create a string from "1"+ "3".repeat(20)
 3. create a string variable and assign it value "hello" with 50 * before and after the word
 4. create a couple of objects with properterties and test equality (value and referential)

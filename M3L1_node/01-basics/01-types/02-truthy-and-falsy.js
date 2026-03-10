@@ -24,7 +24,7 @@ if (undefined) console.log(`show only if truthy`);
 if (NaN) console.log(`show only if truthy`);
 
 
-let s="martin"
+let s="string";
 if (s)
     console.log("Hello");
 else
