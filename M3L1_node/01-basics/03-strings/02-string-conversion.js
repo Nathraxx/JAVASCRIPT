@@ -20,10 +20,10 @@ const scientificString = someNumber.toExponential(2);
 console.log(`${someNumber} with toExponential(2) is ${scientificString}`);
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
-let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+let formatter = new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK' });
 let moneyString = formatter.format(someNumber);
 
-console.log(`${someNumber} with a U.S. currency formatted is ${moneyString}`);
+console.log(`${someNumber} with a SEK currency formatted is ${moneyString}`);
 
 
 
