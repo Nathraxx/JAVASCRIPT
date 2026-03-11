@@ -1,17 +1,36 @@
 'use strict';
 import {seedGenerator, uniqueId, randomNumber, deepCopy} from '../../../../SeidoHelpers/seido-helpers.js';
 
-console.log("Hello world");
-for (let index = 0; index < 10; index++) {
-    console.log(index);
+const nrImages = 10;
+const images = [];
+
+for (let i = 0; i < nrImages; i++) {
+
+    const image = {
+        id: uniqueId(),
+        imgSrc: `https://picsum.photos/200?random=${i}`,  // random image
+        imgText: `Image number ${i}`
+    };
+
+    images.push(image);
 }
 
 const imageList = document.querySelector('#imageList');
 
-const imageItem = document.createElement("div");
-imageItem.classList.add("imgItem");
+images.forEach(img => {
 
+    const imageItem = document.createElement("div");
+    imageItem.classList.add("imgItem");
 
-const p = document.createElement("p");
-imageItem.appendChild(p);
-imageList.appendChild(imageItem);
+    const imageElement = document.createElement("img");
+    imageElement.src = img.imgSrc;
+
+    const p = document.createElement("p");
+    p.textContent = img.imgText;
+
+    imageItem.appendChild(imageElement);
+    imageItem.appendChild(p);
+
+    imageList.appendChild(imageItem);
+
+});
