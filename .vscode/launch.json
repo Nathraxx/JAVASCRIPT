@@ -30,8 +30,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Chrome ../../images.html",
-            "url": "http://localhost:5502/${relativeFileDirname}/../../images.html",
+            "name": "chrome images.html",
+            "url": "http://localhost:5502/${relativeFileDirname}/images.html",
             "webRoot": "${workspaceFolder}"
         },
         {
