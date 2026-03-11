@@ -10,11 +10,10 @@ console.log(today);
 console.log(`Year: ${today.getFullYear()}`);
 console.log(`Year: ${today.getYear()}`);
 console.log(`Month: ${today.getMonth()}`);
-console.log(`Day: ${today.getDay()}`);
-console.log(`Milliseconds since Jan 1, 1970: ${today.getTime()}`);
-console.log(`Date: ${today.getDate()}`);
-console.log(`Full Date: ${today.toLocaleDateString()}`);
-console.log(`Time To Next Year: ${today.getMonth() === 11 ? 31 - today.getDate() : 30 - today.getDate()} days, ${23 - today.getHours()} hours, ${59 - today.getMinutes()} minutes, ${59 - today.getSeconds()} seconds`);
+console.log(`Day: ${today.getDate()}`);
+console.log(`WeekDay: ${today.getDay()}`);
+
+
 // Do a little extra string processing to make sure minutes are padded with
 // a leading 0 if needed to make a two-digit value (like '05' in the time 4:05)
 const hours = today.getHours();

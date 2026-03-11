@@ -5,17 +5,27 @@ import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../..
 //assigning prototype
 let _proto = {prop1: "val1"};
 let o1 = Object.create(_proto);
+let o2 = Object.create(_proto);
+
 console.log(o1);
 console.log(o1.prop1);
 
-//an prop with same name as prototype prop will take precedence
+console.log(o2);
+console.log(o2.prop1);
+
 _proto.prop1 = "new prot value";
 console.log(o1.prop1);
+console.log(o2.prop1);
 
+//an prop with same name as prototype prop will take precedence
+console.log(o1);
 o1.prop1 = "o1 prop1";
 o1.prop2 = "o1 prop2";
+console.log(o1);
 console.log(o1.prop1);
 console.log(o1.prop2);
+
+console.log(o2.prop1);
 
 console.log(Object.getPrototypeOf(o1).prop1);
 
@@ -78,7 +88,7 @@ console.group('Properties inherited are readonly')
 //when setting a proto prop the prop is implictly added to the object
 //Unless getters and setters are used in the prototype
 
-obj1.prot_prop1 = 'prot_prop1-new-value_1';          //We implictly add a new property to obj1
+obj1.prot_prop1 = 'prot_prop1-new-value_1';          //We explicitly add a new property to obj1
 
 console.log(_proto);                                 //_proto props are unchanged
 console.log(obj1);                                   //prot_prop1 is added to obj1
