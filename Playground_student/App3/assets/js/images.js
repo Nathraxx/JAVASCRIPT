@@ -1,36 +1,57 @@
 'use strict';
-import {seedGenerator, uniqueId, randomNumber, deepCopy} from '../../../../SeidoHelpers/seido-helpers.js';
+import {seedGenerator, uniqueId, randomNumber, randomDecimal, deepCopy, isEqual} from '../../../../SeidoHelpers/seido-helpers.js'
 
-const nrImages = 10;
-const images = [];
+//test that scripts are working
+console.log("Hello world");
+for (let index = 0; index < 10; index++) {
+    console.log(index);
 
-for (let i = 0; i < nrImages; i++) {
-
-    const image = {
-        id: uniqueId(),
-        imgSrc: `https://picsum.photos/200?random=${i}`,  // random image
-        imgText: `Image number ${i}`
-    };
-
-    images.push(image);
 }
 
-const imageList = document.querySelector('#imageList');
+// data generation
+const nrImages = 10;
+const images = [
+  'img/bear.png',
+  'img/elephant.png',
+  'img/img1.png',
+  'img/img2.png',
+  'img/img3.png',
+  'img/img4.png',
+  'img/img5.png',
+  'img/img6.png',
+  'img/jupiter1.jpg',
+  'img/jupiter2.jpg',
+  'img/jupiter3.jpg',
+  'img/jupiter4.png',
+  'img/jupiter5.jpg',
+  'img/parrot.png',
+  'img/penguin.png',
+  'img/zebra.png'
+];
+for (let i = 0; i < nrImages; i++) {
+    const image = {
+        id: uniqueId(),
+        imgSrc: `https://picsum.photos/200/200?random=${randomNumber(1,1000)}`,
+        imgText: `Random image ${i+1}`
+    }
+    
+    images.push(image)
+}
 
-images.forEach(img => {
 
-    const imageItem = document.createElement("div");
-    imageItem.classList.add("imgItem");
 
-    const imageElement = document.createElement("img");
-    imageElement.src = img.imgSrc;
+images.forEach((src, index) => {
+  const imageItem = document.createElement("div");
+  imageItem.classList.add("ImgItem");
 
-    const p = document.createElement("p");
-    p.textContent = img.imgText;
+  const img = document.createElement("img");
+  img.src = src;
 
-    imageItem.appendChild(imageElement);
-    imageItem.appendChild(p);
+  const p = document.createElement("p");
+  p.textContent = `Image With Text ${index + 1}`;
 
-    imageList.appendChild(imageItem);
+  imageItem.appendChild(img);
+  imageItem.appendChild(p);
 
+  imageList.appendChild(imageItem);
 });
