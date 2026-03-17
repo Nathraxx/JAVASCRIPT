@@ -37,3 +37,4 @@
         card[5].setAttribute(
           'style', `background-position: top ${aceOfSpades.cardTopOffset - aceOfSpades.cardRow*110 - aceOfSpades.cardRow*228}px left ${-165 - aceOfSpades.cardCol*110 - aceOfSpades.cardCol*162}px;`
         )
+ export {deckOfCards}
