@@ -50,4 +50,7 @@ for (const pet of pets) {
     console.log(`${pet.name} is ${pet.age} years old.`)
 }
 
+
+
+
 //pets.forEach(pet => console.log(`${pet.name} is ${pet.age} years old.`));
