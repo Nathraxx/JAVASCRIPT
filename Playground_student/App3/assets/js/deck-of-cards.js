@@ -97,6 +97,7 @@ console.log(''+deck.dealOne());
 console.log(''+deck.dealOne());
 console.log(deck.count());
 
+export {deckOfCards}
 
 /* Exercise
 1. write a function shuffle() that shuffles the deck
