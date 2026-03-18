@@ -1,6 +1,6 @@
         'use strict'
 
-        import { deckOfCards } from "./deck-of-cards";
+        //import { deckOfCards } from "./deck-of-cards";
 
 
         const [Hearts, Clubs, Spades, Diamonds] = [-200, -135, -150, - 170];
@@ -37,4 +37,4 @@
         card[5].setAttribute(
           'style', `background-position: top ${aceOfSpades.cardTopOffset - aceOfSpades.cardRow*110 - aceOfSpades.cardRow*228}px left ${-165 - aceOfSpades.cardCol*110 - aceOfSpades.cardCol*162}px;`
         )
- export {deckOfCards}
+ //export {deckOfCards}
