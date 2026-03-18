@@ -33,3 +33,4 @@ console.log(Math.max(...numbers));
    - you need to create one array of the suit and one array of the values and then nested loops to create all cards
 2. use the ... operator to destructure your deck of cards to print our the cards to the console
 */
+
