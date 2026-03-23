@@ -7,10 +7,14 @@ const bankID = document.querySelector('#bankID');
 const acountList = document.querySelector('#accountList');
 const btnNext = document.querySelector('#btnNext');
 const btnPrev = document.querySelector('#btnPrev');
+const btnFirstPage = document.querySelector('#btnFirstPage');
+const btnLastPage = document.querySelector('#btnLastPage');
 
 //set EventHandler
 btnNext.addEventListener('click', clickNext);
 btnPrev.addEventListener('click', clickPrev);
+btnFirstPage.addEventListener('click', clickFirstPage);
+btnLastPage.addEventListener('click', clickLastPage);
 
 //Create accounts and bank
 const baccounts = new Account().createRandomMany(_seeder, 25);
@@ -62,6 +66,21 @@ function clickPrev (event)  {
     removeAllChildNodes(acountList);
     renderAccounts(currentPage)
 };
+
+function clickFirstPage (event)  
+{currentPage = 0;
+    removeAllChildNodes(acountList);
+    renderAccounts(currentPage)
+};
+
+function clickLastPage (event)  
+{currentPage = maxNrPages-1;
+    removeAllChildNodes(acountList);
+    renderAccounts(currentPage)
+};
+
+
+
 
 
 /* Exercise
