@@ -1,5 +1,5 @@
 'use strict';
-import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../../SeidoHelpers/seido-helpers.js';
+import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../SeidoHelpers/seido-helpers.js';
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
 //https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
@@ -17,7 +17,7 @@ const myPets = document.querySelector('#myPets');
 const vehicleRows = document.querySelectorAll('#myVehicles li[data-row-id]');
 
 
-const vehicleLinks = document.querySelectorAll('#myVehicles li[data-row-id] a');
+const vehicleLinks = document.querySelectorAll('#myFriends li[data-row-id] a');
 
 
 
