@@ -12,12 +12,13 @@ import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../Se
 
 
 const myPets = document.querySelector('#myPets');
-
+console.log(myPets);
 
 const vehicleRows = document.querySelectorAll('#myVehicles li[data-row-id]');
-
+console.log(vehicleRows);
 
 const vehicleLinks = document.querySelectorAll('#myFriends li[data-row-id] a');
+console.log(vehicleLinks);
 
 
 
