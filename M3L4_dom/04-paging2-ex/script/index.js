@@ -1,5 +1,5 @@
 'use strict';
-import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../SeidoHelpers/seido-helpers.js';
+import {seedGenerator, uniqueId, randomNumber, deepCopy, isEqual} from '../../../SeidoHelpers/seido-helpers.js';
 
 const _seeder = new seedGenerator();
 
@@ -12,6 +12,22 @@ function clickHandler (e) {
 
 const btn = document.getElementById('myBtn');
 const aref = document.querySelector('#myAref');
+
+
+
+
+   
+
+btn.addEventListener('click', clickHandler);
+aref.addEventListener('click', clickHandlerAref);
+
+
+function clickHandlerAref (e) {
+    e.preventDefault();
+    window.alert('Thank you for clicking the link');
+}
+
+
 
 
 //Exercises

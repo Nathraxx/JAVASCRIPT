@@ -40,6 +40,7 @@ export class Bank {
 
         this.name = name;
         this.accounts = accounts;
+        
     }
 
     toString() { return `Bank: ${this.name} has ${this.accounts.length} accounts with a total of ${this.Total()}kr`}

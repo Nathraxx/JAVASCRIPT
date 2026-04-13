@@ -30,17 +30,18 @@ function clickHandlerAllQ (e) {
 
     currentPageNr = 0;
     quoteList =  _seeder.allQuotes;
+    fillList();
 }
 
 function clickHandlerLoveQ (e) {
 
     currentPageNr = 0;
-
-    //filter out all love quotes from _seeder.allQuote
+    quoteList = _seeder.allQuotes.filter(q => q.quote.toLowerCase().includes('love'));
+    fillList();
 }
 
 function clickHandlerClear (e) {
-    //clear the list and reset the quoteList to all quotes
+    clearList();
 }
 
 
@@ -71,6 +72,11 @@ function fillList()
     let quotePage = quoteList.slice(currentPageNr * pageSize, currentPageNr * pageSize + pageSize);
 
     //creat a row for every quote and append it to _list
+    for (const q of quotePage) {
+        const div = createRow();
+        div.innerText = q.quote;
+        _list.appendChild(div);
+    }
 }
 
 function clearList()
