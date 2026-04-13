@@ -37,13 +37,6 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "AppFinal",
-            "url": "http://localhost:5502/${relativeFileDirname}/../table.html",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
             "name": "React Chrome",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}"
